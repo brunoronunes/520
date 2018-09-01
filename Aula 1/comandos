@@ -1,0 +1,10 @@
+git init # inicia o projeto
+git status # verifica status
+git add # adiciona arquivos
+git commit -m 'mensagem' # commita
+git push origin master # sobe na nuvem
+git pull # atualiza repositorio local com a nuvem
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+git clone #puxar arquivos da cloud (site github)

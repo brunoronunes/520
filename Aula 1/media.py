@@ -1,8 +1,18 @@
 #!/usr/bin/python3
-nota1 = int(input('Nota 1: '))
-nota2 = int(input('Nota 2: '))
 
-media = (nota1 + nota2) / 2
+qntd = int(input('Quantidade de notas: '))
+
+soma = 0
+
+for x in range(qntd):
+    nota = int(input('Nota {}: '.format(x+1)))
+    if nota > 10:
+        print('Nota invalida!')
+        qntd -= 1
+        continue
+    soma += nota
+
+media = soma/qntd
 
 if media >= 7:
     print('Media {}, aprovado'.format(media))

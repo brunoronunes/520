@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-lista =[]
+def numerar_arq(nome):
+    with open(nome, 'r') as arquivo:
 
-with open('nomes.txt', 'r') as arquivo:
+        conteudo = arquivo.readlines()
 
-    conteudo = arquivo.readlines()
+    with open(nome, 'w') as arquivo:   
+        for cont, x in enumerate(conteudo):
+            arquivo.write('{}- {}'.format(cont +1,x))
 
-with open('nomes.txt', 'w') as arquivo:   
-    for cont, x in enumerate(conteudo):
-       arquivo.write('{}- {}'.format(cont +1,x))
+numerar_arq('nomes2.txt')
